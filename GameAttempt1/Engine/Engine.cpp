@@ -5,6 +5,8 @@
 int Engine::SCREEN_WIDTH = 1024;
 int Engine::SCREEN_HEIGHT = 768;
 GLFWwindow* Engine::window;
+double Engine::dt = 0;
+double Engine::lastTime;
 
 Engine::Engine()
 {
@@ -61,11 +63,16 @@ bool Engine::Initialize(char* windowTitle)
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
+	lastTime = glfwGetTime();
+
 	return true;
 }
 
 void Engine::Update()
 {
+	double now = glfwGetTime();
+	dt = now - lastTime;
+	lastTime = now;
 	glfwPollEvents();  //Capture mouse motion etc.
 }
 
@@ -78,4 +85,9 @@ void Engine::BeginRender()
 void Engine::EndRender()
 {
 	glfwSwapBuffers(window);
+}
+
+double Engine::GetDT()
+{
+	return dt;
 }

@@ -11,6 +11,8 @@ public:
 	Character();
 	Character(Sprite _sprite);
 	
+	void Flap();
+
 	void Update();
 	void Render();
 

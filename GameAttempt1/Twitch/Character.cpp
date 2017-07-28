@@ -1,5 +1,7 @@
 #include "Character.h"
 
+#include "../Engine/Engine.h"
+
 Character::Character()
 {
 }
@@ -14,6 +16,8 @@ void Character::Update()
 {
 	sprite.Update();
 	rb.Update();
+
+	sprite.SetRotBy(100 * Engine::GetDT());
 }
 
 void Character::Render()
@@ -30,4 +34,9 @@ Sprite& Character::GetSprite()
 Rigidbody& Character::GetRigidbody()
 {
 	return rb;
+}
+
+void Character::Flap()
+{
+	rb.SetVel(Vector3(0, 200, 0));
 }

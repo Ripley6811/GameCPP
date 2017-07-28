@@ -42,6 +42,9 @@
     <ClCompile Include="Twitch\Character.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Twitch\InputManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Engine.h">
@@ -68,8 +71,12 @@
     <ClInclude Include="Twitch\Character.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Twitch\InputManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="README.md" />
   </ItemGroup>
 </Project>

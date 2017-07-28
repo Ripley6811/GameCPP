@@ -148,6 +148,7 @@
     <ClCompile Include="Engine\Physics\Rigidbody.cpp" />
     <ClCompile Include="Twitch.cpp" />
     <ClCompile Include="Twitch\Character.cpp" />
+    <ClCompile Include="Twitch\InputManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Engine.h" />
@@ -158,9 +159,11 @@
     <ClInclude Include="Engine\Math\Vector3.h" />
     <ClInclude Include="Engine\Physics\Rigidbody.h" />
     <ClInclude Include="Twitch\Character.h" />
+    <ClInclude Include="Twitch\InputManager.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
